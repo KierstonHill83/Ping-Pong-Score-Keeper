@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
 
-app.controller('', ['$scope', function($scope) {
-
+app.controller('PingPong', ['$scope', function($scope) {
+  $scope.turn = "true"
 }]);

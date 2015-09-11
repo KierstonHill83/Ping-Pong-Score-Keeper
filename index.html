@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" np-app"myApp">
+<html lang="en" ng-app='myApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Ping Pong</title>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -10,31 +10,50 @@
   </head>
   <body>
     <div class="container">
+
       <div ng-controller="PingPong" class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <h1>Ping Pong Score Keeper</h1>
         </div>
-        <div class="col-sm-4 box">
+
+        <div class="col-sm-4 box" ng-click="count = count + 1" ng-class="{win: count === 11, lose: count2 === 11}" ng-init="count = 0">
           <h2>Player 1</h2>
           <br>
-          <button class="increment"></button>
-          <h4>Serving</h4>
+          <div class="scoreBox">
+            <p>{{count}}</p>
+          </div>
+          <h4 ng-show="turn === false" ng-hide="false">Serving</h4>
         </div>
-        <div class="col-sm-4 box">
-          <h2>Player 1</h2>
+
+        <div class="col-sm-4 box" ng-click="count2 = count2 + 1" ng-class="{win: count2 === 11, lose: count === 11}" ng-init="count2 = 0">
+          <h2>Player 2</h2>
           <br>
-          <button class="increment"></button>
-          <h4>Serving</h4>
+          <div class="scoreBox">
+            <p>{{count2}}</p>
+          </div>
+          <h4 ng-show="turn === true" ng-hide="false">Serving</h4>
         </div>
+
         <br><br>
+
         <div class="col-sm-2 col-sm-offset-5"
           <button class="btn btn-lg btn-warning">RESET</button>
         </div>
       </div>
     </div>
 
+<button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+<span>
+  count: {{count}}
+</span>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
 
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
