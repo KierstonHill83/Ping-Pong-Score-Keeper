@@ -1,5 +1,9 @@
 var app = angular.module('myApp', []);
 
-app.controller('PingPong', ['$scope', function($scope) {
-  $scope.turn = "true"
+app.controller('pingPong', ['$scope', function($scope) {
+  $scope.reset = function() {
+    $scope.count = 0;
+    $scope.count2 = 0;
+    $scope.resetBackground = '#0066FF';
+  };
 }]);

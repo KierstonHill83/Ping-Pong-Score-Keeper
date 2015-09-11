@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app='myApp'>
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Ping Pong</title>
@@ -11,7 +11,7 @@
   <body>
     <div class="container">
 
-      <div ng-controller="PingPong" class="row">
+      <div ng-controller="pingPong" class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <h1>Ping Pong Score Keeper</h1>
         </div>
@@ -22,7 +22,7 @@
           <div class="scoreBox">
             <p>{{count}}</p>
           </div>
-          <h4 ng-show="turn === false" ng-hide="false">Serving</h4>
+          <h4 ng-show="count" ng-hide="count2">Serving</h4>
         </div>
 
         <div class="col-sm-4 box" ng-click="count2 = count2 + 1" ng-class="{win: count2 === 11, lose: count === 11}" ng-init="count2 = 0">
@@ -31,23 +31,16 @@
           <div class="scoreBox">
             <p>{{count2}}</p>
           </div>
-          <h4 ng-show="turn === true" ng-hide="false">Serving</h4>
+          <h4 ng-show="count2" ng-hide="count">Serving</h4>
         </div>
 
         <br><br>
 
-        <div class="col-sm-2 col-sm-offset-5"
-          <button class="btn btn-lg btn-warning">RESET</button>
+        <div>
+          <button ng-click="count=0" type="button" class="btn btn-lg btn-warning">Reset</button>
         </div>
       </div>
     </div>
-
-<button ng-click="count = count + 1" ng-init="count=0">
-  Increment
-</button>
-<span>
-  count: {{count}}
-</span>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
 

@@ -11,10 +11,6 @@ h1 {
   margin: 5px;
 }
 
-.btn {
-  text-align: center;
-}
-
 h2 {
   font-size: 4.5em;
   color: white;
@@ -48,5 +44,9 @@ h4 {
 
 .lose {
   background-color: red;
+}
+
+.btn {
+  margin-left: 544px;
 }
 
