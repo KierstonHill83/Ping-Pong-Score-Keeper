@@ -20,16 +20,16 @@
           <h2>Player 1</h2>
           <br>
           <div class="scoreBox">
-            <p>{{count}}</p>
+            <p ng-cloak="{{count}}">{{count}}</p>
           </div>
           <h4 ng-model="serve()">{{message1}}</h4>
         </div>
 
-        <div class="col-sm-4 box" ng-click="count2 = count2 + 1" ng-class="{win: count2 === 11, lose: count === 11}" ng-init="count2 = 0">
+        <div class="col-sm-4 box" ng-click="count2 = count2 + 1" ng-class="{win: count2 === 11, lose: count === 11}">
           <h2>Player 2</h2>
           <br>
           <div class="scoreBox">
-            <p>{{count2}}</p>
+            <p ng-cloak="{{count2}}">{{count2}}</p>
           </div>
           <h4 ng-model="serve()">{{message2}}</h4>
         </div>
